@@ -77,11 +77,11 @@ func TestClient_Stats(t *testing.T) {
 	assert.Equal(t, 1, len(res))
 	assert.Equal(t, "cert.sn", res[0].Name)
 	assert.Equal(t, 5, len(res[0].Items))
-	assert.Equal(t, "fofa.info", res[0].Items[0].Detail.RootDomains[0])
+	assert.Equal(t, "en.fofa.info", res[0].Items[0].Detail.RootDomains[0])
 
 	// 请求失败
 	cli = &Client{
-		Server:     "http://fofa.info:66666",
+		Server:     "http://en.fofa.info:66666",
 		httpClient: &http.Client{},
 		logger:     logrus.New(),
 	}

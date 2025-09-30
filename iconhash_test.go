@@ -261,7 +261,7 @@ href="/favicon.ico">`)))
 	// 相对
 	assert.Equal(t, "/favicon_rel.ico", ExtractIconFromHtml([]byte(`<link rel="icon" as="image" type="image/x-icon" href="/favicon_rel.ico">`)))
 	// 绝对路径
-	assert.Equal(t, "http://fofa.info/favicon_abs.ico", ExtractIconFromHtml([]byte(`<link rel="icon" as="image" type="image/x-icon" href="http://fofa.info/favicon_abs.ico">`)))
+	assert.Equal(t, "http://en.fofa.info/favicon_abs.ico", ExtractIconFromHtml([]byte(`<link rel="icon" as="image" type="image/x-icon" href="http://en.fofa.info/favicon_abs.ico">`)))
 	assert.Equal(t, "%1", ExtractIconFromHtml([]byte(`<link rel="icon" as="image" type="image/x-icon" href="%1">`)))
 	// 空
 	assert.Equal(t, "", ExtractIconFromHtml([]byte(`<link rel="stylesheet" href="styles.css">`)))

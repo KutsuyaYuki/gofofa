@@ -17,7 +17,7 @@ import (
 )
 
 const (
-	defaultServer     = "https://fofa.info"
+	defaultServer     = "https://en.fofa.info"
 	defaultAPIVersion = "v1"
 )
 

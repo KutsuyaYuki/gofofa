@@ -121,7 +121,7 @@ func TestClient_HostSearch(t *testing.T) {
 
 	// 请求失败
 	cli = &Client{
-		Server:     "http://fofa.info:66666",
+		Server:     "http://en.fofa.info:66666",
 		httpClient: &http.Client{},
 		Account: AccountInfo{
 			FCoin:    0,
@@ -264,7 +264,7 @@ func TestClient_HostSize(t *testing.T) {
 
 	// 请求失败
 	cli = &Client{
-		Server:     "http://fofa.info:66666",
+		Server:     "http://en.fofa.info:66666",
 		httpClient: &http.Client{},
 		logger:     logrus.New(),
 	}
@@ -287,13 +287,13 @@ func TestClient_HostStats(t *testing.T) {
 	hostStat, err = cli.HostStats("1.1.1.1")
 	assert.Nil(t, err)
 	assert.Equal(t, 4, len(hostStat.Ports))
-	hostStat, err = cli.HostStats("fofa.info")
+	hostStat, err = cli.HostStats("en.fofa.info")
 	assert.Nil(t, err)
 	assert.Equal(t, 4, len(hostStat.Ports))
 
 	// 请求失败
 	cli = &Client{
-		Server:     "http://fofa.info:66666",
+		Server:     "http://en.fofa.info:66666",
 		httpClient: &http.Client{},
 		logger:     logrus.New(),
 	}
